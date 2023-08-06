@@ -15,6 +15,13 @@ type Account struct {
 	name string
 }
 
+func GetAccountID(a Account) int {
+	return a.id
+}
+
+func GetAccountName(a Account) string {
+	return a.name
+}
 func CreateAccount(name string) error {
 	db, err := database.GetDB()
 	if err != nil {
